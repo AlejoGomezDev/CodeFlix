@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* esconder scroll para cada navegador */
+
+::-webkit-scrollbar {
+    display: none; 
+}
+:root {
+    /* ---LETRAS--- */
+    /* weights */
+    --weight-gruesa : 600;
+    /* colors */
+    --nav-activo-color : #FFF;
+    --color-primary-gris: #d8d8d8;
+    /* sizes */
+    --fontsize-grande:3em;
+    --fontsize-mediana:2em;
+    --fontsize-chica:1em;
+    /* fuentes */
+    --font-primary:'Open Sans', sans-serif;
+    --font-secondary: Arial, Helvetica, sans-serif;
+    /* ---FONDO--- */
+    /* bg colors */
+    --primary-bg-color: #15131d;
+    --secondary-bg-color:#111018;
+    --buscador-color:#252235;
+    --header-bg-color: rgb(22, 22, 22);
+    --nav-bg-color: #AAA ;
+    /* altura header */
+    --altura-header :10em;
+
+
+}
+
+/* ---BODY--- */
+body {
+    background-color: var(--primary-bg-color);
+    font-family: var(--font-primary);
+}
+
+/* ---HEADER--- */
+header{
+    position: relative;
+    height: var(--altura-header);
+}
+.contenedorNav {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-bg-color);
+    position: fixed;
+    width: 100%;
+    height: var(--altura-header);
+}
+/*---logo---*/
+.contenedor-logo_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45em;
+}
+.logotipo {
+    width: 30%;
+    text-align: center;
+    flex: 1; 
+}
+.logotipo img
+{
+    padding-left: 1em;
+}
+
+/*---nav---*/
+.nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    font-weight: var(--weight-gruesa);
+}
+.nav a {
+    color: var(--color-primary-gris);
+    text-decoration: none;
+}
+header nav a:hover,
+header nav a.activo {
+    color: var(--nav-activo-color);
+}
+#perfilButton {
+    background-color: transparent;
+    border: none; 
+    padding: 0; 
+}
+
+#perfilButton a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Icons Outlined'; 
+    vertical-align: middle; 
+    color: white;
+}
+
+/*buscador*/
+.buscador {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--buscador-color);
+    margin-top: auto;
+    padding: 1em;
+}
+
+.buscador input {
+    width: 30em;
+    height: 1.3em;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 1.5em;
+}
+
+.buscador button {
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border: none;
+    border-radius: 1.5em;
+    cursor: pointer;
+}
+
+/*MAIN*/
+main{
+    background-color: var(--secondary-bg-color);
+}
+#Peliculas h2
+{
+    text-align: center;
+    font-size: var(--fontsize-grande);
+    color: var(--color-primary-gris);
+}
+
+#genreTitle{
+    font-family: var(--font-secondary);
+    color: var(--color-primary-gris);
+}
+
+/* imagen principal */
+.principal
+{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex; /* Usa flexbox para centrar la imagen */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; 
+}
+.principal img{
+    width: 100%;
+    object-fit: cover; 
+    object-position: bottom; 
+}
+
+
+/*FOOTER*/
+.derechos-footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: var(--fontsize-chica);
+    background-color: var(--primary-bg-color);
+    color: var(--color-primary-gris);
+}
+/* SCRYPTS */
+.genre-section {
+    text-align: left;
+    padding-bottom: 3em;
+}
+
+#genreTitle {
+    padding: 0.5em;
+    font-size: var(--fontsize-mediana);
+}
+
+.genre-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.pelicula-title
+{
+    font-size: var(--fontsize-chica);
+    margin: 0;
+}
+.pelicula {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: 1.3em;
+ 
+}
+
+.pelicula img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    border-radius: .5em;
+}
+
+.pelicula .detalles{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--fontsize-mediana);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    color: white;
+}
+.contenedorIndividualPeliculas
+{
+    width: 14em;
+    height: 20em;
+    position: relative;
+}
+.contenedorIndividualPeliculas:hover img
+{
+    transform: scale(0.95);
+    filter:brightness(50%) blur(.2em);
+}
+.contenedorIndividualPeliculas:hover .detalles
+{
+    opacity: 1;
+}
+.link-oculto
+{
+    display: none;
+}

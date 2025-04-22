@@ -1,0 +1,174 @@
+:root {
+    /* fuentes */
+    --font-primary:'Open Sans', sans-serif;
+    --font-secondary: Arial, Helvetica, sans-serif;
+    --font-color: #E4E4E4;
+    /* bg colors */
+    --primary-bg-color: #15131d;
+    --secondary-bg-color:#111018;
+    --buscador-color:#252235;
+    --header-bg-color: rgb(22, 22, 22);
+    --link-color: #6b2c92;
+}
+body
+{
+    font-family: var(--font-primary);
+    color: var(--font-color);
+    background-color: var(--secondary-bg-color);
+}
+h1
+{
+    text-align: center;
+}
+.contenido-usuario {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    margin-left: 7em;
+    gap: 1em;
+    font-size: 1.2rem;
+   
+}
+
+.image-perfil {
+    grid-row: 1;
+    width: auto;  
+    max-height: 14em;
+    border: 2px solid var(--buscador-color);
+    background-color: var(--primary-bg-color);
+    border-radius: 1em;
+}
+
+.image-perfil img {
+    padding: 1em;
+    max-width: 12em;
+    height: auto;
+}
+.contenedor-info
+{
+    grid-row: 1; 
+    grid-column: 2;
+    padding-left: 3em;
+    border: 2px solid var(--buscador-color);
+    background-color: var(--primary-bg-color);
+    max-width: 36em;
+    border-radius: 1em;
+    align-content: center;
+}
+.comentarios-usuarios
+{
+    grid-row: 2;
+    grid-column: 1 / span 2; 
+    border: 2px solid var(--buscador-color);
+    background-color: var(--primary-bg-color);
+    max-width: 54em;
+    border-radius: 1em;
+}
+.span-datos
+{
+    color: #46425f;
+}
+
+/* biografia */
+#biografia-input
+{
+    width: 70%;
+    max-width: 70%;
+    height: 10em;
+    max-height: 10em;
+    border-radius: .5em;
+    
+}
+#biografia{
+    font-size: 1.2rem;
+    color: #46425f; 
+    font-weight: 400;
+    margin-bottom: .8em;
+}
+#biografia-form
+{
+    display: flex;  
+}
+.boton-biografia
+{
+    box-sizing: content-box;
+    background-color: var(--buscador-color);
+    border: 2px solid var(--buscador-color);
+    color: #ffffff;
+    padding: .4em;
+    border-radius: 1em;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 6em;
+    cursor: pointer;
+    margin: .4em 0 .5em 2em;
+}
+#boton-biografia:hover
+{
+    background-color: #413e52;
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+}
+#logoutButton
+{
+    box-sizing: content-box;
+    background-color: var(--buscador-color);
+    border: 2px solid var(--buscador-color);
+    color: #ffffff;
+    padding: .4em;
+    border-radius: 1em;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 6em;
+    cursor: pointer;
+    margin: 2em 0 2em 0;
+}
+#logoutButton:hover
+{
+    background-color: #413e52;
+}
+#eliminarUsuario
+{
+    box-sizing: content-box;
+    background-color: rgb(110, 40, 40);
+    border: 2px solid rgb(99, 39, 39);
+    color: #ffffff;
+    padding: .4em;
+    border-radius: 1em;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 6em;
+    cursor: pointer;
+    margin: 2em 0 2em 1em;
+}
+#eliminarUsuario:hover
+{
+    background-color:rgba(185, 53, 53, 0.788) ;  
+}
+#comentarios-container
+{
+    margin-left: 1em;
+}
+#Volver
+{
+    background-color: var(--buscador-color);
+    border: 2px solid var(--buscador-color);
+    color: #ffffff;
+    padding: 1rem 1rem;
+    border-radius: 1em;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+#Volver:hover
+{
+    background-color: #413e52;
+}
+
+#linkVolver
+{
+    text-align: center;
+    margin: 1em 0 0em -58em;
+}

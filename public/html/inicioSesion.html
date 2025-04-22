@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/inicioSesion.css">
+    <title>Iniciar Sesion</title>
+</head>
+<body>
+    <div id="linkVolver">
+        <button id="Volver" onclick="window.location.href='/'">Volver</button>
+    </div>
+<div class="form">
+    <form id="inicioSesionForm" class="formulario" enctype="multipart/form-data" method="post" action="/inicioSesion">
+        <h1>Iniciar Sesion</h1>
+        <input type="email" id="email" class="rellenar" name="email" required autocomplete="email" placeholder="Ingrese su email aqui...">
+        <input type="password" id="contrasenia" class="rellenar" name="contrasenia" required placeholder="Ingrese su contraseña aqui...">
+
+        <input type="submit" name="IniciarSesion" id="IniciarSesion" class="Boton" value="Iniciar Sesion">
+
+        <h3>Si no tiene una cuenta <a href="/registro" id="registrarse">registrese acá</a></h3>
+    </form>
+</div>
+    <script src="../js/inicioSesion.js"></script>
+</body>
+</html>
+ 

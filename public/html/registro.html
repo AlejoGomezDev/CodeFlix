@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/registro.css">
+    <title>Registrarse</title>
+</head>
+<body>
+    <div id="linkVolver">
+        <button id="Volver" onclick="window.location.href='/'">Volver</button>
+    </div>
+<div class="form">
+    <form id="crearUsuarioForm" class="formulario" enctype="multipart/form-data" action="/registro" method="POST">
+        <h1>Registrarse</h1>
+        <input type="text" id="nombre" class="rellenar" name="nombre" required placeholder="Escriba su nombre aqui...">
+
+        <input type="text" id="apellido" class="rellenar" name="apellido" required placeholder="Escriba su apellido aqui...">
+
+        <input type="email" id="email" class="rellenar" name="email" required placeholder="Ejemplo@gmail.com"  autocomplete="email">
+        
+        <input type="text" id="nombreUsuario" class="rellenar" name="nombreUsuario" required placeholder="Escriba su nombre de usuario aqui...">
+
+        <input type="password" id="contrasenia" class="rellenar" name="contrasenia" required placeholder="Escriba su contraseña aqui...">
+
+        <input type="checkbox" id="mayorEdad" class="presionar" name="mayorEdad">
+        <label class="aceptar" for="mayorEdad">Acepto que soy mayor de 18 años</label>
+        <br>
+
+        <input type="checkbox" id="terminos" class="presionar" name="terminos">
+        <label class="aceptar" for="terminos">Acepto terminos y condiciones</label>
+
+        <input type="submit" name="Registrarse" id="Registrarse" class="Boton" value="Registrarse">
+
+        <h3>Si ya tiene una cuenta <a href="/inicioSesion" id="iniciarSes">inicie sesion acá</a></h3>
+
+    </form>
+</div>
+    <script src="../js/registro.js"></script>
+</body>
+</html>
